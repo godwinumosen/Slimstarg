@@ -1,0 +1,92 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{%block content %} 
+
+  <link rel="stylesheet" href="{% static 'css/events.css' %}" media="screen">
+  <br><br>
+
+  <section class="u-black u-clearfix u-section-5" id="sec-f844">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-clearfix u-expanded-width u-gutter-20 u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            {% for slim in slims %}
+            <div class="u-align-center-lg u-container-style u-layout-cell u-left-cell u-size-20 u-layout-cell-1">
+              <div class="u-container-layout">
+                <a href="https://youtu.be/_PRquLVC4XY"><img src="{{slim.image.url}}" alt="" class="u-align-left-sm u-align-left-xs u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-image u-image-default u-image-1" data-image-width="1080" data-image-height="1080"></a>
+                <h5 class="u-align-center-sm u-text u-text-1">{{slim.event}}</h5>
+                <h3 class="u-text u-text-body-alt-color u-text-6">{{slim.title}}</h3>
+                <p class="u-text u-text-3">{{slim.content}}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><br><br>
+  
+    <section class="u-clearfix u-grey-70 u-section-2" id="sec-cc93">
+      <div class="u-clearfix u-gutter-0 u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            <div class="u-align-center-sm u-align-center-xs u-black u-container-style u-layout-cell u-left-cell u-size-20 u-layout-cell-1">
+              <div class="u-container-layout u-valign-middle-md u-valign-middle-sm u-container-layout-1">
+                <h2 class="u-align-left-lg u-align-left-md u-align-left-xl u-text u-text-1">AUG<br>25
+                </h2>
+                <h3 class="u-text u-text-body-alt-color u-text-2">The Release Of<br>LAMBA
+                </h3>
+              </div>
+            </div>
+            <div class="u-align-center-sm u-align-center-xs u-align-left-lg u-container-style u-grey-80 u-layout-cell u-size-20 u-layout-cell-2">
+              <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-container-layout-2">
+                <h2 class="u-align-left-md u-align-left-xl u-align-left-xs u-text u-text-body-color u-text-3">AUG<br>&nbsp; 3&nbsp;
+                </h2>
+                <h3 class="u-text u-text-body-alt-color u-text-4">The Release Of<br>FRIEND ZONE
+                </h3>
+              </div>
+            </div>
+            <div class="u-align-center-sm u-align-center-xs u-black u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-3">
+              <div class="u-container-layout u-valign-middle-lg u-valign-middle-xs u-container-layout-3">
+                <h2 class="u-align-left-lg u-align-left-md u-align-left-xl u-text u-text-5">SEPT<br>25
+                </h2>
+                <h3 class="u-text u-text-body-alt-color u-text-6">SAPA IS GLOBAL ft Slimstarg</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><br><br>
+
+    <section class="u-black u-clearfix u-hidden-sm u-section-8" id="sec-f1fa">
+      <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            <div class="u-container-style u-layout-cell u-left-cell u-size-33 u-layout-cell-1">
+              <div class="u-container-layout">
+                <div class="u-border-3 u-border-black u-grey-80 u-shape u-shape-rectangle u-shape-1"></div>
+                <img class="u-image u-image-1" src="{% static 'images/sapa.jpg'%}" data-image-width="680" data-image-height="680">
+                <div class="u-container-style u-group u-group-1">
+                  <div class="u-container-layout u-valign-top-sm u-container-layout-2">
+                    <h2 class="u-custom-font u-font-oswald u-text u-text-grey-90 u-text-1">SAPA IS GLOBAL NOW AVAILABLE FOR STREAMING AND DOWNLOAD ON ALL PLATFORMS&nbsp;</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-container-style u-layout-cell u-right-cell u-size-27 u-layout-cell-2">
+              <div class="u-container-layout u-valign-bottom-md u-valign-bottom-sm u-container-layout-3">
+                <img class="u-expanded-width-xl u-hidden-sm u-image u-image-2" src="{% static 'images/a1.jpeg'%}" data-image-width="1080" data-image-height="1080">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center-xs u-clearfix u-palette-1-base u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-section-9" id="sec-2e64">
+      <img src="{% static 'images/Logo5.jpg'%}" alt="" class="u-align-left u-expanded-width u-image u-image-1" data-image-width="500" data-image-height="500">
+    </section>
+
+    {% endblock %}
+</html>

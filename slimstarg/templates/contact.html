@@ -1,0 +1,41 @@
+
+{% load static %}
+  
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+    <title>Contact Form</title>
+    
+  <head>
+
+    <body>
+        
+      <form action="" method="post" >
+       
+        {% csrf_token %}
+        <div class="wrapper">
+          <h3>{{email}}</h3>
+          <h3>{{phone}}</h3>
+          <div class="user-input">
+            <label>Name </label>
+            <input type="text" placeholder="Your name" name="message-name">
+          </div>
+
+          <div class="user-input">
+            <label>Email </label>
+            <input type="email" placeholder="Your email" name="message-email">
+          </div>
+            
+          <div class="user-input">
+            <label for="message">Message </label>
+            <textarea name="message" cols="30" rows="4"  placeholder="Write your message"></textarea>
+          </div>
+                
+          <div class="user-button">
+            <button href=""> Send a message</button>
+          </div>
+          
+        </div>
+      </form>   
+      
+</html>
+
