@@ -1,13 +1,13 @@
 {
     "builds":[{
-        "src": "slimstarg/wsgi.py",
+        "src": "slims/wsgi.py",
         "use": "@vercel/python",
         "config": {"maxlambdaSize": "15mb", "runtime": "python3.9" }
     }],
     "routes":[
         {
             "src": "/(.*)",
-            "dest": "slimstarg/wsgi.py"
+            "dest": "slims/wsgi.py"
         }
     ]
 }
